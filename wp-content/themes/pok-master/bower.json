@@ -1,0 +1,23 @@
+{
+  "name": "nouveau-wordpress-theme-framework",
+  "version": "1.0.0",
+  "authors": [
+    "Matt van Andel <matt@mattvanandel.com>"
+  ],
+  "description": "Basic template for a new WordPress theme using Foundation for Sites.",
+  "license": "MIT & GPL-2.0",
+  "homepage": "http://nouveauframework.org",
+  "dependencies": {
+    "foundation-sites": "~6.2.1",
+    "motion-ui": "~1.2.2"
+  },
+  "ignore": [
+    "**/.*",
+    "_docs",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}
