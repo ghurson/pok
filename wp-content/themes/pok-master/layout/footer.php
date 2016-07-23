@@ -1,6 +1,6 @@
 	<footer id="footer" class="row">
 	
-		<div id="copyright">
+		<div id="copyright" class="column">
 			<?php
 			printf(
 				__( 'Copyright &copy; %s %s. All Rights Reserved.', 'nvLangScope' ),

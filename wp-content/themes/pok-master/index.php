@@ -8,24 +8,20 @@
 use \NV\Theme\Utilities\Theme;
 
 Theme::get_header();
-Theme::output_file_marker( __FILE__ );
+Theme::output_file_marker(__FILE__);
 ?>
-	<div id="container" class="row">
-		<div id="content" class="small-12 large-8 columns">
-			<?php //Theme::archive_nav( array( 'id' => 'nav-top' ) ) ?>
-			<?php wp_link_pages(); ?>
+    <div id="container" class="row">
+        <div id="content" class="small-12 large-8 columns">
 
-			<?php Theme::loop( 'parts/article', 'parts/article-empty' ) ?>
-			
-			<?php paginate_links(); ?>
+            <?php
+            Theme::loop('parts/article', 'parts/article-empty');
+            GH\Display::files();
+            ?>
 
-			<?php get_template_part( 'parts/archive-nav' ) ?>
-		</div>
+        </div>
 
-		<div id="sidebar" class="small-12 large-4 columns">
-			<?php dynamic_sidebar( 'sidebar-1' ) ?>
-		</div>
+        <?php GH\Display::sidebar() ?>
 
-	</div>
+    </div>
 <?php
 Theme::get_footer();
