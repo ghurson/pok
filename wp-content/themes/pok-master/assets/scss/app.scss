@@ -7,7 +7,7 @@
 
 @charset 'utf-8';
 
-@import 'settings';
+@import '_michellanne/settings';
 @import 'foundation';
 @import 'motion-ui';
 
@@ -57,7 +57,26 @@
 @include motion-ui-animations;
 
 // NOUVEAU mixins, including image-url() fix
-@import "nv-mixins";
+//@import "nv-mixins";
 
 // Load NOUVEAU compatibility styles
-@import "nv-wordpress";
+//@import "nv-wordpress";
+
+// custom styles
+@import '_michellanne/backgrounds';
+@import '_michellanne/biography';
+@import '_michellanne/blog';
+@import '_michellanne/buttons';
+@import '_michellanne/footer';
+@import '_michellanne/forms';
+@import '_michellanne/global-elements';
+@import '_michellanne/header';
+@import '_michellanne/hero';
+@import '_michellanne/intro';
+@import '_michellanne/locations';
+@import '_michellanne/locations-with-maps';
+@import '_michellanne/login';
+@import '_michellanne/motifs';
+@import '_michellanne/nav';
+@import '_michellanne/services';
+@import '_michellanne/social-sharing';

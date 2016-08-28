@@ -25,4 +25,37 @@ class Display {
 
 
     }
+
+    static function front_page_posts(){
+
+        $query = new \WP_Query([
+            'posts_per_page' => 3,
+        ]);
+
+        if(!$query->found_posts) return false;
+
+        return $query->posts;
+
+
+    }
+
+    static function site_header(){
+
+        if(is_front_page()) print '
+            <div class="stripes-bg">
+            <div class="gradient-bg">';
+
+        get_template_part("parts/header");
+
+        if(is_front_page()) get_template_part("parts/home/hero");
+
+
+        if(is_front_page()) print '
+            </div>
+            </div>';
+
+
+
+    }
+
 }

@@ -126,7 +126,10 @@ class Config {
 		 ******************/
 
 		// Base stylesheet (compiled Foundation SASS)
+		wp_enqueue_style( 'google-font', 'https://cloud.typography.com/7726934/7334352/css/fonts.css' );
 		wp_enqueue_style( 'app', NV::i()->get_url( 'css', 'app.css' ) );
+		wp_enqueue_style( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css' );
+		wp_enqueue_style( 'owl-carousel-theme', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css' );
 
 		// WordPress's required styles.css
 		wp_enqueue_style( 'styles', get_bloginfo( 'stylesheet_url' ), array( 'app' ) );
@@ -148,8 +151,14 @@ class Config {
 		// Load the complete version of Foundation
 		wp_enqueue_script( 'foundation', NV::i()->get_url( 'bower', 'foundation-sites/dist/foundation' . $js_min . '.js' ), array( 'jquery', 'what-input' ), false, true );
 
+		wp_enqueue_script( 'sticky-footer', NV::i()->get_url( 'js', 'sticky-footer.min.js' ), array( 'foundation' ), false, true );
+		wp_enqueue_script( 'owl-carousel', NV::i()->get_url( 'js', 'owl.carousel.min.js' ), array( 'foundation' ), false, true );
+		wp_enqueue_script( 'big-text', NV::i()->get_url( 'js', 'bigtext.min.js' ), array( 'foundation' ), false, true );
+		wp_enqueue_script( 'big-text', NV::i()->get_url( 'js', 'bigtext.min.js' ), array( 'foundation' ), false, true );
+
 		// Load any custom javascript (remember to update dependencies if you changed the above)...
-		wp_enqueue_script( 'nv-theme', NV::i()->get_url( 'js', 'app' . $js_min . '.js' ), array( 'foundation' ), false, true );
+		wp_enqueue_script( 'nv-theme', NV::i()->get_url( 'js', 'app.js' ), array( 'foundation' ), false, true );
+
 
 	}
 

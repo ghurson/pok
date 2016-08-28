@@ -1,23 +1,18 @@
-	<footer id="footer" class="row">
-	
-		<div id="copyright" class="column">
-			<?php
-			printf(
-				__( 'Copyright &copy; %s %s. All Rights Reserved.', 'nvLangScope' ),
-				date( 'Y' ),
-				get_bloginfo( 'name' )
-			);
-			?>
-		</div>
-	
-	</footer>
+<footer>
+    <div class="row">
+        <div class="small-12 columns">
 
-	<!-- start wp_footer() hooks -->
-	<?php wp_footer(); ?>
-	<!-- end wp_footer() hooks -->
+            <?php the_field("footer_text","options") ?>
 
-</div>
-<!-- /#frame -->
+        </div>
+    </div>
+</footer>
+
+
+<!-- start wp_footer() hooks -->
+<?php wp_footer(); ?>
+<!-- end wp_footer() hooks -->
+
 
 </body>
 </html>
