@@ -1,0 +1,53 @@
+.blue-border{
+  width: 60px;
+  height: 4px;
+  display: block;
+  background-color: $periwinkle;
+  margin-top: .8em;
+  margin-right: auto;
+  margin-bottom: 1.2em;
+  margin-left: auto;
+  @include breakpoint(medium){
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.bracketed-header-wrapper{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bracketed-header{
+  position: relative;
+  display: inline-block;
+  padding: 0 .5em;
+}
+
+.bracketed-header::before, 
+.bracketed-header::after{
+  content: "\0020";
+  width: 1000px;
+  position: absolute;
+  height: 20px;
+  margin-top: -8px;
+  top: 50%;
+  background-image: url("../img/pok-dbl-border.png");
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.bracketed-header::before{
+  border-right: 1px solid $blue;
+  right: 100%;
+}
+
+.bracketed-header::after{
+  border-left: 1px solid $blue;
+  left: 100%;
+}
+
+.blue-bg{
+  background-color: transparentize($periwinkle-lt, .1);
+}

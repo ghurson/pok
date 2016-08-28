@@ -1,0 +1,20 @@
+body{
+  height: auto;
+}
+
+footer{
+  background-color: $navy;
+  padding: 2em 0;
+  color: $white;
+  @include breakpoint(medium){
+    padding: 2em 0 5em 0;
+  }
+}
+
+.copywrite{
+  font-family: $body-font-family-serif;
+}
+
+.small-print{
+  font-size: .6em;
+}

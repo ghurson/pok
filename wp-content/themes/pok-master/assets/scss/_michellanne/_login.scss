@@ -1,0 +1,10 @@
+.login{
+  // @extend .stripes-bg;
+  background-color: $periwinkle-lt;
+  width: 100%;
+  padding: 2em;
+  margin-top: 2em;
+  @include breakpoint(medium){
+    margin-top: 3em;
+  }
+}

@@ -1,0 +1,26 @@
+.social-sharing{
+  margin: 1.5em 0;
+}
+
+.social-sharing__link{
+  &:link,
+  &:visited{
+    text-decoration: none;
+    svg{
+      height: 2em;
+      fill: $blue;
+      margin: 0 .2em;
+      @include breakpoint(medium){
+        margin-right: .5em;
+      }
+    }
+  }
+  
+  &:hover,
+  &:active{
+    background-color: transparent;
+    svg{
+      fill: $blue-dk;
+    }
+  }
+}

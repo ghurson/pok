@@ -1,0 +1,58 @@
+form{
+  margin-bottom: $global-margin;
+}
+
+input, select{
+  border-top: none;
+  border-right: none;
+  border-bottom: 2px solid $periwinkle;
+  border-left: none;
+  // padding-right: 0 !important;
+  // padding-left: 0 !important;
+
+  &:focus{
+    border-bottom: 2px solid $periwinkle-dk;
+  }
+}
+
+fieldset{
+  margin-bottom: $global-margin;
+}
+
+legend{
+  margin-bottom: $global-margin;
+  font-family: $body-font-family-serif;
+  font-size: 1.2em;
+  color: $dark-gray;
+}
+
+// select{
+//   &:focus{
+//     outline: none;
+//   }
+// }
+
+.input-group-button{
+  border-bottom: 2px solid $periwinkle;
+  background-color: $white;
+  padding-right: .5em;
+  svg{
+    height: 1.2em;
+    fill: $blue;
+    vertical-align: middle;
+  }
+
+  a:link,
+  a:visited{
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active{
+    background-color: transparent;
+  }
+}
+
+label{
+  margin-bottom: .4em;
+}

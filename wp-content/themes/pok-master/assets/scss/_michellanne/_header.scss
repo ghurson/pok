@@ -1,0 +1,85 @@
+header{
+  margin-bottom: 1em;
+  position: relative;
+  border-bottom: 4px solid $blue;
+}
+
+.logo{
+  display: block;
+  vertical-align: bottom;
+  &:link, &:visited{
+    svg{
+      fill: $black;
+    }
+  }
+  &:hover, &:active{
+    background-color: transparent;
+    svg{
+      fill: $medium-gray;
+    } 
+  }
+
+  width: 75%;
+  margin: 2em auto 1.2em auto;
+
+  @include breakpoint(medium){
+    width: 50%;
+  }
+
+  @include breakpoint(large){
+    margin-top: 3em;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+.client-portal{
+  font-weight: 600;
+  vertical-align: middle;
+  padding: .5rem .7rem;
+  display: inline-block;
+  @include breakpoint(medium){
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    font-size: .8em;
+    background-color: $navy;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    transition: padding-top 0.3s;
+    -webkit-transition: padding-top 0.3s;
+  }
+
+  @include breakpoint(large){
+    padding-top: .5em;
+  }
+
+  &:link,
+  &:visited{
+    text-decoration: none;
+    color: $navy;
+    @include breakpoint(medium){
+      color: $white;
+    }
+  }
+  
+  &:hover,
+  &:active{
+    color: $navy-dk;
+    @include breakpoint(medium){
+      background-color: $navy;
+      padding-top: 1.2em;
+      color: $white;
+    }
+
+    @include breakpoint(large){
+      padding-top: .7em;
+    }
+  }
+}
+
+.title-bar{
+  display: inline-block;
+}

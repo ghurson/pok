@@ -1,0 +1,10 @@
+.biography{
+  @extend .blog-feed__article;
+  @include clearfix();
+}
+
+.bio__headshot{
+  width: 200px;
+  box-shadow: 5px 5px 0 $periwinkle;
+  margin-bottom: 1.5em;
+}

@@ -1,0 +1,13 @@
+.location-with-map{
+  margin: $global-margin*1.5 0;
+  @include clearfix();
+}
+
+.map{
+  margin-bottom: $global-margin;
+  @include breakpoint(medium){
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 0;
+  }
+}

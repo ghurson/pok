@@ -1,0 +1,16 @@
+.button{
+  font-weight: 700;
+  text-transform: uppercase;
+  &:link, &:visited{
+    box-shadow: 5px 5px 0 $periwinkle;
+    text-decoration: none;
+  }
+  &:hover, &:active{
+    box-shadow: 5px 5px 0 $periwinkle-dk;
+  }
+}
+
+.button.secondary:hover, 
+.button.secondary:focus {
+  background-color: $blue-dk;
+}
