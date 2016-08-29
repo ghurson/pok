@@ -193,12 +193,22 @@ class Editor {
 			),
 			*/
 
-			array(
-				'title'   => __( 'Section', 'nvLangScope' ),
-				'block'   => 'section',
-				'wrapper' => true,
-				'exact'   => true,
-			),
+				array(
+						'title'   => __( 'Lead', 'nvLangScope' ),
+						'block'   => 'p',
+						'classes' => 'lead',
+						'exact' => true
+				)
+
+				/*
+
+				array(
+						'title'   => __( 'Section', 'nvLangScope' ),
+						'block'   => 'section',
+						'wrapper' => true,
+						'exact'   => true,
+				),
+
 			array(
 				'title'   => __( 'Foundation Row', 'nvLangScope' ),
 				'block'   => 'div',
@@ -235,7 +245,7 @@ class Editor {
 				'selector' => '.columns',
 				'classes'  => 'medium-6',
 			),
-
+*/
 		);
 
 		//Encode our array as JSON, which automagically makes it TinyMCE compatible

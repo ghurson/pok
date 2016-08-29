@@ -155,6 +155,7 @@ class Config {
 		wp_enqueue_script( 'owl-carousel', NV::i()->get_url( 'js', 'owl.carousel.min.js' ), array( 'foundation' ), false, true );
 		wp_enqueue_script( 'big-text', NV::i()->get_url( 'js', 'bigtext.min.js' ), array( 'foundation' ), false, true );
 		wp_enqueue_script( 'big-text', NV::i()->get_url( 'js', 'bigtext.min.js' ), array( 'foundation' ), false, true );
+		wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js', array( 'foundation' ), false, true );
 
 		// Load any custom javascript (remember to update dependencies if you changed the above)...
 		wp_enqueue_script( 'nv-theme', NV::i()->get_url( 'js', 'app.js' ), array( 'foundation' ), false, true );

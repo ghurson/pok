@@ -7,9 +7,11 @@
 ?>
 <article id="article-<?php the_ID() ?>" class="<?php echo implode(get_post_class(),' ') ?>">
 
-    <h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
+    <h1><?php the_title() ?></h1>
 
-    <?php the_post_thumbnail() ?>
+    <?php the_post_thumbnail('large', [
+        'class' => 'bio__headshot float-left'
+    ]) ?>
 
     <div>
         <?php the_content() ?>

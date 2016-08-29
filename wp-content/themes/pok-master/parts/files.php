@@ -9,8 +9,8 @@
         <div class="column">
             <h4><?php print $title ?></h4>
             <?php print $description ?>
-            <a data-open="modal_<?php print $c ?>" class="button">View</a>
-            <a href="<?php print $url ?>" class="button">Download</a>
+            <a data-open="modal_<?php print $c ?>" class="button white">View</a>
+            <a href="<?php print $url ?>" class="button white">Download</a>
         </div>
 
 

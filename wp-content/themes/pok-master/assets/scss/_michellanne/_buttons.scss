@@ -8,6 +8,9 @@
   &:hover, &:active{
     box-shadow: 5px 5px 0 $periwinkle-dk;
   }
+  &.white {
+    color: white;
+  }
 }
 
 .button.secondary:hover, 

@@ -16,13 +16,15 @@ Theme::output_file_marker(__FILE__);
             <div id="content" class="small-12 large-8 columns">
 
                 <?php
-                Theme::loop('parts/article', 'parts/article-empty');
+                Theme::loop('parts/excerpt', 'parts/article-empty');
                 GH\Display::files();
                 GH\Display::offices();
                 ?>
 
             </div>
-            <?php // GH\Display::sidebar() ?>
+            <div id="sidebar" class="small-12 large-4 columns">
+                <?php get_template_part("parts/blog/sidebar") ?>
+            </div>
         </div>
         <?php GH\Display::team(); ?>
     </main>
