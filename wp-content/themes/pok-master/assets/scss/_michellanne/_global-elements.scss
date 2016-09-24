@@ -1,65 +1,96 @@
-body{
-  @include breakpoint(large){
+body {
+  height: auto;
+  overflow-x: hidden;
+
+  @include breakpoint(large) {
     border-top: solid 14px $navy;
   }
-  overflow-x: hidden;
 }
 
-h2{
-  line-height: 1.25em;
+main {
+  padding: 2em 0 5em;
+
+  @include breakpoint(medium) {
+    padding: 2em 0 10em;
+  }
 }
 
-h3, h4, h5, h6{
+h1,
+h2 {
+  margin-bottom: 1rem;
+
+  @include breakpoint(medium) {
+    margin-bottom: 2rem;
+  }
+}
+
+h3,
+h4,
+h5,
+h6 {
   font-family: $body-font-family;
+  line-height: 1.5em;
   text-transform: uppercase;
 }
 
-.header-no-margin{
+.header-no-margin {
   margin-bottom: .2em;
 }
 
-.subheader{
+.subheader {
   text-transform: none;
 }
 
-.lead{
+.lead {
   font-family: $body-font-family-serif;
 }
 
-a{
+a {
   font-weight: 500;
-  &:link, &:visited{
+
+  &:link,
+  &:visited {
     color: $navy;
     text-decoration: underline;
   }
 
-  &:hover, &:active{
-    color: $navy-dk;
+  &:hover,
+  &:active {
     background-color: $periwinkle;
+    color: $navy-dk;
   }
 }
 
-main{
-  padding: 2em 0 5em 0;
-  text-align: center;
-  @include breakpoint(medium){
-    text-align: left;
-    padding: 2em 0 10em 0;
-  }
-}
-
-.label{
-  font-weight: 600;
+.label {
   font-family: $body-font-family;
-  margin-bottom: 1.5em;
+  font-weight: 600;
+  margin-bottom: 2em;
 }
 
-ul{
-  @include breakpoint(medium){
+ul {
+  @include breakpoint(medium) {
     list-style-position: outside;
   }
 }
 
-li{
+li {
   margin-bottom: .2em;
+}
+
+a,
+input,
+button,
+textarea,
+label,
+fieldset,
+legend,
+select,
+optgroup,
+option,
+datalist,
+keygen,
+output {
+  &:focus {
+    outline-color: #d6a813 solid 5px;
+  }
 }

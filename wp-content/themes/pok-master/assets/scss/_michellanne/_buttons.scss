@@ -1,19 +1,20 @@
-.button{
+.button {
   font-weight: 700;
   text-transform: uppercase;
-  &:link, &:visited{
+
+  &:link,
+  &:visited {
     box-shadow: 5px 5px 0 $periwinkle;
     text-decoration: none;
   }
-  &:hover, &:active{
+
+  &:hover,
+  &:active {
     box-shadow: 5px 5px 0 $periwinkle-dk;
-  }
-  &.white {
-    color: white;
   }
 }
 
-.button.secondary:hover, 
+.button.secondary:hover,
 .button.secondary:focus {
   background-color: $blue-dk;
 }

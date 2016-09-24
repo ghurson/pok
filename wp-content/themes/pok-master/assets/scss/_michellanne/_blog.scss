@@ -1,37 +1,39 @@
-// Featured Blog Posts Styles
+// Blog styles for featured posts on homepage
 
-.blog-featured{
+.blog-featured {
   padding: 2em 0;
-  text-align: center;
   position: relative;
-  @include breakpoint(large){
+  text-align: center;
+
+  @include breakpoint(large) {
     padding: 5em 0;
   }
 
-  .blue-border{
+  .divider {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-.blog-featured__article-wrapper{
-  @include breakpoint(large){
+.blog-featured__article-wrapper {
+  @include breakpoint(large) {
     position: relative;
   }
 }
 
-.blog-featured__article{
+.blog-featured__article {
   margin: 3em 0;
   padding: 0 3em;
-  @include breakpoint(medium){
+
+  @include breakpoint(medium) {
     padding: 0;
   }
 }
 
-.blog-featured__article .l-arrow,
-.blog-featured__article .r-arrow {
+.blog-featured__article::before, 
+.blog-featured__article::after {
   position: absolute;
-  content: "\0020";
+  content: '\0020';
   top: 45%;
   width: 35px;
   height: 60px;
@@ -39,63 +41,165 @@
   background-position: center;
   background-size: 70%;
   background-color: $periwinkle-lt;
-  cursor: pointer;
-  @include breakpoint(large){
-    width: 53px;
-    height: 90px;
-    background-size: cover;
+
+  @include breakpoint(large) {
     background-color: transparent;
+    background-size: cover;
+    height: 90px;
+    width: 53px;
   }
 }
 
-.blog-featured__article .l-arrow{
-  background-image: url("../img/pok-arrow-left.svg");
+.blog-featured__article::before {
+  background-image: url('../img/pok-arrow-left.svg');
   left: 0;
 }
 
-.blog-featured__article .r-arrow{
-  background-image: url("../img/pok-arrow-right.svg");
+.blog-featured__article::after {
+  background-image: url('../img/pok-arrow-right.svg');
   right: 0;
 }
 
-// Blog Feed Styles
-
-.blog-feed{
+.blog-featured__heading {
+  font-size: 1.8em;
+  line-height: 1.4em;
 }
 
-.blog-feed__article{
-  margin-bottom: $global-margin*3;
-  padding-bottom: $global-margin*3;
-  border-bottom: 1px solid $periwinkle;
+// Blog styles for feed
+
+.blog-feed {
+  margin-bottom: 6em;
 }
 
-.blog-feed__link{
-  &:link,
-  &:visited{
+.blog-feed__article {
+  @extend %has-bottom-border;
+}
+
+.blog-feed__heading {
+  a:link,
+  a:visited {
     text-decoration: none;
   }
 }
 
-// Blog Rail Styles
+// Blog styles for articles on individual post pages
 
-.blog-rail{
-  margin-top: $global-margin*3;
+.blog-article {
+  @extend %has-bottom-border;
+
+  p {
+    font-size: $lead-font-size;
+  }
+
+  .lead {
+    font-size: 150%;
+  }
+}
+
+// Blog styles for tags
+
+.blog-tags,
+.blog-related {
+  margin-bottom: 3em;
+
+  @include breakpoint(medium) {
+    margin-bottom: 6em;
+  }
+}
+
+.blog-tags__link {
+  font-family: $body-font-family-serif;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+// Blog styles for comments section
+
+.blog-comments {
+  list-style-type: none;
+  margin: 0;
+}
+
+.blog-comments__level2 {
+  margin-left: 4em;
+}
+
+.blog-comments__article {
+  border-bottom: 1px solid $periwinkle;
+  padding: 2em 0;
+
+  header {
+    border-bottom: 0;
+  }
+
+  footer {
+    background-color: transparent;
+    color: $body-font-color;
+    font-size: $small-font-size;
+    padding: 0;
+  }
+}
+
+.blog-comments__author {
+  color: $medium-gray;
+  font-family: $body-font-family-serif;
+  font-size: $lead-font-size;
+  font-style: italic;
+  font-weight: 700;
+  line-height: $lead-lineheight;
+}
+
+.blog-comments__post {
+  @extend %container--blue;
+  margin-top: $global-margin * 3;
+}
+
+// Blog styles for related articles
+
+.blog-related {
   background-color: $periwinkle-lt;
   padding: 2em;
-  @include breakpoint(medium){
+
+  @include breakpoint(large) {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+.blog-related__article {
+  @include breakpoint(large) {
+    background-color: $periwinkle-lt;
+    padding: 1.5em;
+  }
+}
+
+.blog-related__heading {
+  font-family: $body-font-family-serif;
+  font-size: $global-font-size;
+  line-height: $global-lineheight;
+  text-transform: none;
+}
+
+// Blog styles for rail
+
+.blog-rail {
+  @extend %container--blue;
+  margin-top: $global-margin * 3;
+
+  @include breakpoint(large) {
     margin: 0;
   }
 }
 
-.blog-rail__section{
-  margin-bottom: $global-margin*3;
+.blog-rail__section {
+  margin-bottom: $global-margin * 3;
 }
 
-.blog-rail__section:last-child{
+.blog-rail__section:last-child {
   margin-bottom: 0;
 }
 
-.blog-rail__list{
+.blog-rail__list {
   list-style-type: none;
   margin: 0;
   padding: 0;

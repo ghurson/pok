@@ -9,10 +9,13 @@ $header_img = get_field("top_image");
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="small-12 medium-9 medium-centered columns">
-        <div class="intro">
-            <?php the_field("header_content") ?>
+
+<section class="intro">
+    <div class="row">
+        <div class="small-12 medium-9 medium-centered columns">
+            <div class="intro__wrapper">
+                <?php the_field("header_content") ?>
+            </div>
         </div>
     </div>
-</div>
+</section>

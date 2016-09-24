@@ -1,22 +1,24 @@
-.service{
+.service {
   padding: 2em 0;
-  text-align: center;
   position: relative;
-  @include breakpoint(large){
-    text-align: left;
+  text-align: center;
+
+  @include breakpoint(large) {
     padding: 5em 0;
+    text-align: left;
   }
 
-  .blue-border{
-    margin-right: auto;
+  .divider {
     margin-left: auto;
-    @include breakpoint(large){
-      margin-right: 0;
+    margin-right: auto;
+
+    @include breakpoint(large) {
       margin-left: 0;
+      margin-right: 0;
     }
   }
 }
 
-.service__lead{
+.service__lead {
   font-family: $body-font-family-serif;
 }

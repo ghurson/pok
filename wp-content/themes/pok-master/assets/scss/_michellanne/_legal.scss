@@ -1,0 +1,17 @@
+.legal {
+  background-color: $navy;
+  color: $white;
+  padding: 2em 0;
+
+  @include breakpoint(medium) {
+    padding: 2em 0 5em;
+  }
+}
+
+.copywrite {
+  font-family: $body-font-family-serif;
+}
+
+.small-print {
+  font-size: .6em;
+}

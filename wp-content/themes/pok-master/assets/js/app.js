@@ -9,6 +9,8 @@ init_container_adjust();
 init_home_slider();
 init_home_page_modal();
 init_archive_dd();
+init_sidebar_form_submit();
+init_menu_class_additions();
 
 $(window).resize(function () {
     init_services_menu_sizing();
@@ -42,9 +44,12 @@ function init_container_adjust() {
 
 function init_mobile_menu() {
 
-    $(".mobile-header-section .menu-icon-container").click(function () {
-        $(".ses-mobile-menu").toggle();
+    $(".title-bar").click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $(".menu-header-menu-container").stop().slideToggle();
     })
+
 }
 
 function get_screen_size() {
@@ -245,3 +250,35 @@ function init_archive_dd(){
     })
 
 }
+
+function init_sidebar_form_submit(){
+    console.log('testing');
+    var form = $(".pok-search");
+
+    if(!form.length) return false;
+
+    console.log("form found");
+
+    form.find("a").click(function(e){
+        e.preventDefault();
+        form.submit();
+    })
+}
+
+function init_menu_class_additions(){
+
+    var menu = $("#menu-header-menu, #menu-header-menu-1");
+
+    if(!menu.length) return false;
+
+    console.log("testing");
+
+    var dd = menu.find("ul");
+
+    dd.addClass("sub-nav");
+
+    dd.find("li").addClass("sub-nav__item");
+    dd.find("a").addClass("sub-nav__link")
+
+}
+

@@ -6,9 +6,9 @@
                 <span class="label"><?php print get_the_time("F j, Y", $post) ?></span>
 
                 <h2><?php print $post->post_title ?></h2>
-                <span class="blue-border"></span>
+                <span class="divider"></span>
                 <?php print apply_filters('the_excerpt', $post->post_excerpt) ?>
-                <a href="<?php print get_permalink($post->ID) ?>">Read More</a>
+                <a href="<?php print get_permalink($post->ID) ?>">Read More about <?php print $post->post_title ?></a>
                 <div class="r-arrow"></div>
             </article>
         </div>

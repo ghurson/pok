@@ -37,3 +37,21 @@ if (!current_user_can('manage_options')) {
     add_filter('show_admin_bar', '__return_false');
 }
 
+register_nav_menus(array(
+        'top-menu' => __('Menu1', 'twentyfourteen'),
+        'side-menu' => __('Menu2', 'twentyfourteen'),
+        'footer-menu' => __('Menu3', 'twentyfourteen')
+    )
+);
+
+function my_walker_nav_menu_start_el($item_output, $item, $depth, $args)
+{
+
+    $a_class = $depth == 0 ? 'main-nav__link' : 'sub-nav__link';
+
+    $item_output = preg_replace('/<a /', '<a class=" ' . $a_class . '" ', $item_output, 1);
+
+    return $item_output;
+}
+
+add_filter('walker_nav_menu_start_el', 'my_walker_nav_menu_start_el', 10, 4);

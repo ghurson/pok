@@ -1,0 +1,16 @@
+table {
+  font-size: 90%;
+}
+
+caption {
+  font-family: $body-font-family-serif;
+  font-size: $lead-font-size;
+  font-style: italic;
+  font-weight: 400;
+  line-height: $lead-lineheight;
+  text-align: left;
+}
+
+thead {
+  border-bottom: 4px solid $blue;
+}

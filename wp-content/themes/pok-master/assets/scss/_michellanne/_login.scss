@@ -1,10 +1,9 @@
-.login{
-  // @extend .stripes-bg;
-  background-color: $periwinkle-lt;
-  width: 100%;
-  padding: 2em;
+.login {
+  @extend %container--blue;
   margin-top: 2em;
-  @include breakpoint(medium){
+  width: 100%;
+
+  @include breakpoint(medium) {
     margin-top: 3em;
   }
 }

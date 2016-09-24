@@ -1,0 +1,10 @@
+%container--blue {
+  background-color: $periwinkle-lt;
+  padding: 2em;
+}
+
+%has-bottom-border {
+  border-bottom: 1px solid $periwinkle;
+  margin-bottom: $global-margin * 3;
+  padding-bottom: $global-margin * 3;
+}

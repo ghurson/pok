@@ -1,58 +1,54 @@
-form{
+form {
   margin-bottom: $global-margin;
 }
 
-input, select{
-  border-top: none;
-  border-right: none;
+input,
+select,
+textarea {
   border-bottom: 2px solid $periwinkle;
-  border-left: none;
-  // padding-right: 0 !important;
-  // padding-left: 0 !important;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
 
-  &:focus{
+  &:active,
+  &:focus {
     border-bottom: 2px solid $periwinkle-dk;
   }
 }
 
-fieldset{
+fieldset {
   margin-bottom: $global-margin;
 }
 
-legend{
-  margin-bottom: $global-margin;
+legend {
+  color: $dark-gray;
   font-family: $body-font-family-serif;
   font-size: 1.2em;
-  color: $dark-gray;
+  margin-bottom: $global-margin;
 }
 
-// select{
-//   &:focus{
-//     outline: none;
-//   }
-// }
-
-.input-group-button{
-  border-bottom: 2px solid $periwinkle;
+.input-group-button {
   background-color: $white;
+  border-bottom: 2px solid $periwinkle;
   padding-right: .5em;
-  svg{
-    height: 1.2em;
+
+  svg {
     fill: $blue;
+    height: 1.2em;
     vertical-align: middle;
   }
 
   a:link,
-  a:visited{
+  a:visited {
     text-decoration: none;
   }
 
   a:hover,
-  a:active{
+  a:active {
     background-color: transparent;
   }
 }
 
-label{
+label {
   margin-bottom: .4em;
 }

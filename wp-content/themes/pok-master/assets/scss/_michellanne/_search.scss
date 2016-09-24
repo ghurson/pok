@@ -1,0 +1,8 @@
+.search {
+  box-shadow: 1px 1px 10px $dark-gray;
+  top: 0 !important;
+
+  @include breakpoint(medium) {
+    top: 50px !important;
+  }
+}

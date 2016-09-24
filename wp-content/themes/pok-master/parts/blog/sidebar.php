@@ -2,14 +2,14 @@
     <div class="blog-rail__section medium-text-left">
         <h3>Search</h3>
 
-        <form action="<?php print site_url() ?>">
+        <form action="<?php print site_url() ?>" class="pok-search">
             <label>Enter Search Criteria</label>
 
             <div class="input-group">
                 <input class="input-group-field" type="text" name="s">
 
                 <div class="input-group-button">
-                    <a href="#">
+                    <a href="#" class="submit-form">
                         <svg version="1.1" id="Magnifying_glass" xmlns="http://www.w3.org/2000/svg"
                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20"
                              enable-background="new 0 0 20 20" xml:space="preserve">

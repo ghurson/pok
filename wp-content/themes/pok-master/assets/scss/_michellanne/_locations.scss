@@ -1,18 +1,19 @@
-.locations{
-  padding: 2em 0;
-  text-align: center;
-  position: relative;
+.locations {
   @extend %periwinkle-white-gradient;
-  @include breakpoint(large){
+  padding: 2em 0;
+  position: relative;
+  text-align: center;
+
+  @include breakpoint(large) {
     padding: 5em 0;
   }
 
-  .blue-border{
+  .divider {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-.locations__address{
+.locations__address {
   margin-top: 2em;
 }

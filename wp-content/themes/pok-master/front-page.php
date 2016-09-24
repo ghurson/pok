@@ -19,8 +19,7 @@ Theme::output_file_marker(__FILE__);
                     <h2 class="bracketed-header"><?php print $area['title'] ?></h2>
                 </div>
                 <h2 class="hide-for-small-only"><?php print $area['title'] ?></h2>
-                <span class="blue-border show-for-large-up"></span>
-
+                <span class="divider show-for-large-up"></span>
                 <p class="service__lead lead"><?php print $area['summary'] ?></p>
             </div>
             <div class="small-12 large-8 columns">
@@ -40,7 +39,7 @@ Theme::output_file_marker(__FILE__);
                     <h2 class="bracketed-header"><?php the_field("offices_header") ?></h2>
                 </div>
                 <h2 class="hide-for-small-only"><?php the_field("offices_header") ?></h2>
-                <span class="blue-border"></span>
+                <span class="divider"></span>
                 <?php the_field("offices_text") ?>
             </div>
         </div>
@@ -78,8 +77,8 @@ Theme::output_file_marker(__FILE__);
     <div class="blog-featured">
         <div class="row">
             <div class="small-12 columns">
-                <div class="bracketed-header-wrapper">
-                    <h3 class="bracketed-header">From the Blog</h3>
+                <div class="brackets">
+                    <h3 class="brackets__header">From the Blog</h3>
                 </div>
             </div>
         </div>

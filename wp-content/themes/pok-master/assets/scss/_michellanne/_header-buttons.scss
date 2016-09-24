@@ -1,0 +1,87 @@
+%header-buttons {
+  display: inline-block;
+  font-weight: 600;
+  padding: .5rem .7rem;
+  vertical-align: middle;
+  float: right; 
+
+  @include breakpoint(small) {
+    svg {
+      fill: $navy;
+    }
+
+    &:link,
+    &:visited {
+      color: $navy;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $periwinkle;
+      color: $navy-dk;
+
+      svg {
+        fill: $navy-dk;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    background-color: $navy;
+    box-shadow: 1px 1px 5px transparentize($medium-gray, .5);
+    float: none;
+    font-size: .7em;
+    padding: 1em;
+    position: absolute;
+    text-transform: uppercase;
+    -webkit-transition: padding-top .3s;
+    transition: padding-top .3s;
+
+    svg {
+      fill: $white;
+    }
+
+    &:link,
+    &:visited {
+      color: $white;
+    }
+
+    &:active,
+    &:hover {
+      background-color: $navy;
+      color: $white;
+      padding-top: 1.2em;
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    font-size: .8em;
+    padding-top: .5em;
+  }
+}
+
+.client-portal-button {
+  @extend %header-buttons;
+
+  @include breakpoint(medium) {
+    right: 4em;
+  }
+}
+
+.search-button {
+  @extend %header-buttons;
+
+  @include breakpoint(medium) {
+    right: 0;
+  }
+
+  svg {
+    height: 1.3em;
+    vertical-align: middle;
+  }
+}

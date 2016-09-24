@@ -1,20 +1,12 @@
-.hero{
-  width: 100%;
-  display: block; 
+.hero {
+  display: block;
   overflow: hidden;
   position: relative;
+  width: 100%;
   z-index: 0;
 
-  img{
-    width: 100%;
+  img {
     height: auto;
+    width: 100%;
   }
 }
-
-// .caption{
-//   padding: .5em 1em;
-//   background-color: $navy;
-//   color: $white;
-//   font-size: .8em;
-//   display: block;
-// }
