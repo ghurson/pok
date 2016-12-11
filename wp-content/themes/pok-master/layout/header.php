@@ -22,4 +22,6 @@
 
 </head>
 <body <?php body_class() ?>>
-<?php GH\Display::site_header(); ?>
+<div class="wrapper">
+	<a class="show-on-focus" href="#mainContent">Skip to Content</a>
+	<?php GH\Display::site_header(); ?>

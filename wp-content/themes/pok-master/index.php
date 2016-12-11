@@ -11,9 +11,9 @@ Theme::get_header();
 Theme::output_file_marker(__FILE__);
 ?>
 
-    <main>
+    <main id="mainContent" role="main" tabindex="0">
         <div id="container" class="row">
-            <div id="content" class="small-12 large-8 columns">
+            <div id="content" class="small-12 medium-10 large-8 columns">
 
                 <?php
                 Theme::loop('parts/article', 'parts/article-empty');

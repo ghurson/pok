@@ -55,3 +55,16 @@ function my_walker_nav_menu_start_el($item_output, $item, $depth, $args)
 }
 
 add_filter('walker_nav_menu_start_el', 'my_walker_nav_menu_start_el', 10, 4);
+
+function comment_formatter($comment, $args, $depth)
+{
+    $GLOBALS['comment'] = $comment; ?>
+
+    <article class="blog-comments__article">
+        <header><span class="blog-comments__author"><?php print comment_author() ?><span></span></span></header>
+        <?php comment_text() ?>
+        <footer style="margin-top:0px;"><?php print get_comment_date(); print ' '; print get_comment_time() ?> | <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></footer>
+
+    </article>
+    <?php
+}
