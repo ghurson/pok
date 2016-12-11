@@ -10,21 +10,12 @@ use \NV\Theme\Utilities\Theme;
 Theme::get_header();
 Theme::output_file_marker(__FILE__);
 ?>
-
     <main>
         <div id="container" class="row">
-            <div id="content" class="small-12 large-8 columns">
-
-                <?php
-                Theme::loop('parts/article', 'parts/article-empty');
-                GH\Display::files();
-                GH\Display::offices();
-                ?>
-
+            <div id="content" class="">
+                <?php GH\Display::login_form();?>
             </div>
-            <?php // GH\Display::sidebar() ?>
         </div>
-        <?php GH\Display::team(); ?>
     </main>
 <?php
 Theme::get_footer();

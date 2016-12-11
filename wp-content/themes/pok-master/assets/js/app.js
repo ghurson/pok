@@ -2,6 +2,7 @@
 
 //$(document).foundation();
 
+
 init_mobile_menu();
 init_services_menu_sizing();
 init_front_page_video_content();
@@ -11,6 +12,7 @@ init_home_page_modal();
 init_archive_dd();
 init_sidebar_form_submit();
 init_menu_class_additions();
+init_dd_menu_hack();
 
 $(window).resize(function () {
     init_services_menu_sizing();
@@ -102,12 +104,8 @@ function init_front_page_video_content() {
     var mobile_vid_carousel = $(".ses-mobile-video-carousel").owlCarousel({
         items: 1,
         loop: true,
-        onInitalized: test
     });
 
-    function test() {
-        alert("test");
-    }
 
     mobile_vid_carousel.on("initalized.owl.carousel", function () {
         alert("something")
@@ -252,7 +250,6 @@ function init_archive_dd(){
 }
 
 function init_sidebar_form_submit(){
-    console.log('testing');
     var form = $(".pok-search");
 
     if(!form.length) return false;
@@ -271,8 +268,6 @@ function init_menu_class_additions(){
 
     if(!menu.length) return false;
 
-    console.log("testing");
-
     var dd = menu.find("ul");
 
     dd.addClass("sub-nav");
@@ -282,3 +277,20 @@ function init_menu_class_additions(){
 
 }
 
+function init_dd_menu_hack(){
+
+
+  var link = $(".sub-nav__link");
+
+  if(!link.length) reutrn;
+
+  link.hover(function(){
+      var color = $(this).css('background-color');
+      $(this).parent().css('background-color', color);
+  }, function(){
+    $(this).parent().css("background-color",'transparent');
+  });
+
+
+
+}

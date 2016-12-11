@@ -7,7 +7,8 @@
 
                 <h2><?php print $post->post_title ?></h2>
                 <span class="divider"></span>
-                <?php print apply_filters('the_excerpt', $post->post_excerpt) ?>
+                <?php print apply_filters('the_excerpt', wp_trim_words($post->post_excerpt, 35, '')) ?>
+                <br>
                 <a href="<?php print get_permalink($post->ID) ?>">Read More about <?php print $post->post_title ?></a>
                 <div class="r-arrow"></div>
             </article>

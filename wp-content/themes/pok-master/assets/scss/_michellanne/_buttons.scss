@@ -1,10 +1,10 @@
 .button {
   font-weight: 700;
   text-transform: uppercase;
+  box-shadow: 5px 5px 0 $periwinkle;
 
   &:link,
   &:visited {
-    box-shadow: 5px 5px 0 $periwinkle;
     text-decoration: none;
   }
 

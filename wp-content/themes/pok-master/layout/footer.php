@@ -1,5 +1,5 @@
 <footer>
-    <?php if (get_the_ID() != 1): ?>
+    <?php if (get_the_ID() != 1 && get_the_ID() != 13): ?>
         <section class="contact-footer">
             <div class="row">
                 <div class="small-12 medium-4 columns">

@@ -11,12 +11,13 @@ Theme::get_header();
 Theme::output_file_marker(__FILE__);
 ?>
 
+
 <?php foreach (get_field('practice_areas') as $c => $area): ?>
     <div class="service <?php print $c % 2 != 0 ? 'blue-bg' : '' ?>">
         <div class="row">
             <div class="small-12 large-4 columns">
                 <div class="bracketed-header-wrapper show-for-small-only">
-                    <h2 class="bracketed-header"><?php print $area['title'] ?></h2>
+                    <h2 class="brackets__header"><?php print $area['title'] ?></h2>
                 </div>
                 <h2 class="hide-for-small-only"><?php print $area['title'] ?></h2>
                 <span class="divider show-for-large-up"></span>
