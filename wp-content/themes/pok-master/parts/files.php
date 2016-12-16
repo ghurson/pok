@@ -1,28 +1,29 @@
-<div class="row">
+<table class="hover stack">
+    <caption>Below you will find all your documents.</caption>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Last Modified</th>
+    </tr>
+    </thead>
+    <tbody>
+
     <?php
     foreach($files as $c => $file):
         $url = $file['file']['url'];
         $title = $file['title'];
         $description = $file['description'];
-        ?>
+    ?>
 
-        <div class="column">
-            <h4><?php print $title ?></h4>
-            <?php print $description ?>
-            <a data-open="modal_<?php print $c ?>" class="button white">View</a>
-            <a href="<?php print $url ?>" class="button white">Download</a>
-        </div>
-
-
-        <div class="reveal" id="modal_<?php print $c ?>" data-animation-in="fade-in" data-animation-out="fade-out" data-reveal>
-            <button class="close-button" data-close aria-label="Close reveal" type="button">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <h1><?php print $title ?></h1>
-            <?php print do_shortcode("[embeddoc url='$url' download='all']") ?>
-        </div>
-
+        <tr>
+            <td><a href="<?php print $url ?>"><?php print $title ?></a></td>
+            <td><?php print $description ?></td>
+            <td><?php print get_the_time('F j, Y', $file['file']['id']); ?></td>
+        </tr>
 
     <?php endforeach; ?>
 
-</div>
+
+    </tbody>
+</table>

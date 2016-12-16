@@ -2,7 +2,7 @@
 
 //$(document).foundation();
 
-
+hack_comment_form();
 init_mobile_menu();
 init_services_menu_sizing();
 init_front_page_video_content();
@@ -25,6 +25,14 @@ $(window).load(function () {
     size_info_label_elements();
     init_location_maps();
 });
+
+function hack_comment_form(){
+    var form = $("form.comment-form");
+    if(!form.length) return false;
+
+    form.find("textarea").attr("rows", 2);
+    form.find("input[type=submit]").addClass('button').val("Submit");
+}
 
 
 function init_container_adjust() {

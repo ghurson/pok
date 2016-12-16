@@ -15,10 +15,10 @@
         </div>
     <?php else: ?>
         <span class="label"><?php print get_the_time("F j, Y", $post) ?></span>
-        <h2><a class="blog-feed__link" href="blog-post.html"><?php print $post->post_title ?></a></h2>
+        <h1 class="blog-feed__heading"><a href="<?php print get_permalink($post->ID) ?>"><?php print $post->post_title ?></a></h1>
         <?php include(locate_template('parts/components/social-sharing.php')) ?>
     <?php endif ?>
-    <span class="blue-border"></span>
+    <span class="divider"></span>
     <?php print apply_filters("the_content", $post->post_excerpt) ?>
     <a href="<?php print get_permalink($post->ID) ?>">Read More</a>
 </article>

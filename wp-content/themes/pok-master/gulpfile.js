@@ -10,28 +10,17 @@ gulp.task('sass', function() {
 	return gulp.src([ 'assets/scss/*.scss', "!assets/scss/_*.scss" ])
 		.pipe($.sourcemaps.init())
 		.pipe($.sass({
-				includePaths: sassPaths,
-				outputStyle: 'compressed' //options; expanded, nested, compact, compressed
-			})
+			includePaths: sassPaths,
+			outputStyle: 'compressed' //options; expanded, nested, compact, compressed
+		})
 			.on('error', $.sass.logError))
 		.pipe($.autoprefixer({
-			browsers: ['last 2 versions', 'ie >= 9']
+			browsers: ['last 4 versions', 'ie >= 10', 'ios 6']
 		}))
-		.pipe($.sourcemaps.write('./'))
+		.pipe($.sourcemaps.write())
 		.pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('js', function(){
-	return gulp.src([ 'assets/js/*.js', "!assets/js/*.min.js" ])
-		.pipe($.uglify())
-		.pipe($.rename({
-			suffix: ".min"
-		}))
-		.pipe(gulp.dest('assets/js'));
-});
-
-// Automatically set up watchers when gulp is run
-gulp.task('default', ['sass', 'js'], function() {
+gulp.task('default', ['sass'], function() {
 	gulp.watch(['assets/scss/**/*.scss'], ['sass']);
-	gulp.watch(['assets/js/**/*.js'], ['js']);
 });

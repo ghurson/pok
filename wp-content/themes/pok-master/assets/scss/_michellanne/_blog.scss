@@ -30,8 +30,8 @@
   }
 }
 
-.blog-featured__article::before, 
-.blog-featured__article::after {
+.blog-featured__article .l-arrow,
+.blog-featured__article .r-arrow {
   position: absolute;
   content: '\0020';
   top: 45%;
@@ -41,6 +41,7 @@
   background-position: center;
   background-size: 70%;
   background-color: $periwinkle-lt;
+  cursor: pointer;
 
   @include breakpoint(large) {
     background-color: transparent;
@@ -50,12 +51,12 @@
   }
 }
 
-.blog-featured__article::before {
+.blog-featured__article .l-arrow {
   background-image: url('../img/pok-arrow-left.svg');
   left: 0;
 }
 
-.blog-featured__article::after {
+.blog-featured__article .r-arrow {
   background-image: url('../img/pok-arrow-right.svg');
   right: 0;
 }
