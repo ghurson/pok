@@ -30,8 +30,8 @@ function hack_comment_form(){
     var form = $("form.comment-form");
     if(!form.length) return false;
 
-    form.find("textarea").attr("rows", 2);
-    form.find("input[type=submit]").addClass('button').val("Submit");
+    form.find("textarea").attr("rows", 5);
+    form.find("#submit").addClass('button').val("Submit");
 }
 
 
@@ -262,7 +262,6 @@ function init_sidebar_form_submit(){
 
     if(!form.length) return false;
 
-    console.log("form found");
 
     form.find("a").click(function(e){
         e.preventDefault();

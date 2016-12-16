@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="format-detection" content="telephone=no">
 
 	<!--wp_head-->
 	<?php wp_head(); //Enqueue your own stuff in functions.php or \NV\Hooks\Config::enqueue_assets() ?>

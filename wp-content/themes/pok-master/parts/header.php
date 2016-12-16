@@ -3,9 +3,9 @@
         <div class="row hide-for-small-only">
             <div class="small-12 columns" style="text-align: right">
                 <?php if (!is_user_logged_in()): ?>
-                    <a class="client-portal-button" href="<?php print site_url("client-portal") ?>">Client Portal</a>
+                    <a class="client-portal-button gh-client-login-button" href="<?php print site_url("client-portal") ?>">Client Portal</a>
                 <?php else: ?>
-                    <a class="client-portal-button" href="<?php print site_url("client-portal") ?>">Client Portal</a>
+                    <a class="client-portal-button gh-client-login-button" href="<?php print site_url("client-portal") ?>">Client Portal</a>
                 <?php endif ?>
                 <a class="search-button" data-open="reveal-search" aria-controls="reveal-search" id="tlbjwe-reveal"
                    aria-haspopup="true" tabindex="0"><span class="show-for-sr">Search</span>
@@ -21,7 +21,7 @@
                 <?php if (is_user_logged_in()): ?>
                     <a class="client-portal-button gh-edit-account"
                        href="<?php print site_url('wp-admin/profile.php') ?>">Edit Account</a>
-                    <a class="client-portal-button" href="<?php print wp_logout_url() ?>">Log Out</a>
+                    <a class="client-portal-button gh-logout-button" href="<?php print wp_logout_url() ?>">Log Out</a>
                 <?php endif ?>
             </div>
         </div>
