@@ -16,10 +16,10 @@ Theme::output_file_marker(__FILE__);
     <div class="service <?php print $c % 2 != 0 ? 'blue-bg' : '' ?>">
         <div class="row">
             <div class="small-12 large-4 columns">
-                <div class="bracketed-header-wrapper show-for-small-only">
+                <div class="bracketed-header-wrapper hide-for-large">
                     <h2 class="brackets__header"><?php print $area['title'] ?></h2>
                 </div>
-                <h2 class="hide-for-small-only"><?php print $area['title'] ?></h2>
+                <h2 class="show-for-large"><?php print $area['title'] ?></h2>
                 <span class="divider show-for-large-up"></span>
                 <p class="service__lead lead"><?php print $area['summary'] ?></p>
             </div>
@@ -61,10 +61,16 @@ Theme::output_file_marker(__FILE__);
                                 <h3><?php print $office->post_title ?></h3>
 
                                 <p><?php the_field("address", $office->ID) ?>
-                                    <a class="hide-for-small-only show-map" href="#">view map</a></p>
+                                    <?php $map_link = get_field("map_address", $office->ID) ?>
+                                    <?php if ($map_link): ?>
+                                    <a target="_blank" href="<?php print $map_link ?>" class="hide-for-small-only">view map</a></p>
+                                <?php endif ?>
 
                                 <p class="hide-for-small-only"><?php the_field("phone_number", $office->ID) ?></p>
-                                <a class="button secondary expanded show-for-small-only show-map" href="#">view map</a>
+                                <?php if ($map_link): ?>
+                                    <a class="button secondary expanded show-for-small-only"
+                                       href="<?php print $map_link ?>" target="_blank">view map</a>
+                                <?php endif ?>
                                 <a class="button primary expanded show-for-small-only"
                                    href="#">call <?php the_field("phone_number", $office->ID) ?></a>
                             </div>
