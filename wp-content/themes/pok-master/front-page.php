@@ -63,7 +63,8 @@ Theme::output_file_marker(__FILE__);
                                 <p><?php the_field("address", $office->ID) ?>
                                     <?php $map_link = get_field("map_address", $office->ID) ?>
                                     <?php if ($map_link): ?>
-                                    <a target="_blank" href="<?php print $map_link ?>" class="hide-for-small-only">view map</a></p>
+                                    <a target="_blank" href="<?php print $map_link ?>" class="hide-for-small-only">view
+                                        map</a></p>
                                 <?php endif ?>
 
                                 <p class="hide-for-small-only"><?php the_field("phone_number", $office->ID) ?></p>
@@ -81,24 +82,27 @@ Theme::output_file_marker(__FILE__);
             </div>
         </div>
     </div>
-    <div class="blog-featured">
-        <div class="row">
-            <div class="small-12 columns">
-                <div class="brackets">
-                    <h3 class="brackets__header">From the Blog</h3>
+    <?php
+    $posts = GH\Display::front_page_posts();
+    if ($posts) :
+        ?>
+        <div class="blog-featured">
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="brackets">
+                        <h3 class="brackets__header">From the Blog</h3>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="pok-home-slider owl-carousel">
-            <?php
-            $posts = GH\Display::front_page_posts();
-            if ($posts)
+            <div class="pok-home-slider owl-carousel">
+                <?php
                 foreach ($posts as $post)
                     include(locate_template("parts/home/post_excerpt.php"));
-            ?>
+                ?>
+            </div>
         </div>
-    </div>
+    <?php endif ?>
 
 
 <?php
