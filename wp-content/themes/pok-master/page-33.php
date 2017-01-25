@@ -13,7 +13,6 @@ Theme::output_file_marker(__FILE__);
     <main>
         <div id="container" class="row">
             <div id="content" class="">
-                <?php GH\Display::login_form();?>
                 <?php GH\Display::files();?>
             </div>
         </div>
