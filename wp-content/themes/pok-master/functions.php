@@ -68,3 +68,13 @@ function comment_formatter($comment, $args, $depth)
     </article>
     <?php
 }
+
+function my_acf_google_map_api( $api ){
+
+    $api['key'] = 'AIzaSyBTPRlM3dld-gMv4v1qXIB8KPWf62tDLJU';
+
+    return $api;
+
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
